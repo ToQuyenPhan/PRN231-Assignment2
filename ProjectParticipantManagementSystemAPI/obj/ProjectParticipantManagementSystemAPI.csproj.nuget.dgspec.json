@@ -116,7 +116,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\BusinessObject\\BusinessObject.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -225,6 +229,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.OData": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.17, )"
