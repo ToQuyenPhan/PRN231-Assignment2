@@ -1,7 +1,9 @@
 ﻿using BusinessObject.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -56,6 +58,14 @@ namespace DataAccess
             {
                 return context.Set<T>().Find(id);
             }
+        }
+
+        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
+        {
+            using (var context = new ProjectParticipatingDbContext())
+            {
+                return context.Set<T>().Where(expression);
+            }    
         }
     }
 }

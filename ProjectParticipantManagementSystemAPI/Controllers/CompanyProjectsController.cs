@@ -60,5 +60,6 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
             GenericRepo.Delete(key);
             return Ok();
         }
+        //Search Query: https://localhost:44351/odata/CompanyProjects?$filter=contains(ProjectName, 'A') 
     }
 }
