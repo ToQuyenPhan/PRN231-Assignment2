@@ -22,5 +22,16 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
             var list = GenericRepo.GetAll();
             return Ok(list);
         }
+
+        [EnableQuery]
+        public ActionResult<Department> Get([FromRoute]int key)
+        {
+            var department = GenericRepo.GetById(key);
+            if(department == null)
+            {
+                return NotFound();
+            }
+            return Ok(department);
+        }
     }
 }

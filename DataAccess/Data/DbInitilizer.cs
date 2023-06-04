@@ -27,11 +27,11 @@ namespace ProjectParticipantManagementSystemAPI.Data
             var employees = new Employee[]
             {
                 new Employee{Password = "1", FullName = "Phan Thi To Quyen", Address = "HCM City", Status = Status.Active, 
-                DepartmentID = 1, EmailAddress = "quyen@gmail.com"},
+                Skills = "Coding", Telephone = "0123456789", DepartmentID = 1, EmailAddress = "quyen@gmail.com"},
                 new Employee{Password = "1", FullName = "Phan Thi To Quyen 2", Address = "HCM City", Status = Status.Active,
-                DepartmentID = 2, EmailAddress = "quyen2@gmail.com"},
+                Skills = "Coding", Telephone = "0123456789", DepartmentID = 2, EmailAddress = "quyen2@gmail.com"},
                 new Employee{Password = "1", FullName = "Phan Thi To Quyen 3", Address = "HCM City", Status = Status.Active,
-                DepartmentID = 3, EmailAddress = "quyen3@gmail.com"}
+                Skills = "Coding", Telephone = "0123456789", DepartmentID = 3, EmailAddress = "quyen3@gmail.com"}
             };
             context.Employees.AddRange(employees);
             context.SaveChanges();

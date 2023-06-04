@@ -39,6 +39,7 @@ namespace ProjectParticipantManagementSystemAPI
             services.AddControllers().AddOData(option => option.Select().Filter().Count().OrderBy().Expand()
             .AddRouteComponents("odata", GetEdmModel()));
             services.AddScoped<IGenericRepo<Department>, GenericRepo<Department>>();
+            services.AddScoped<IGenericRepo<CompanyProject>, GenericRepo<CompanyProject>>();
             //services.AddSwaggerGen(c =>
             //{
             //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectParticipantManagementSystemAPI", Version = "v1" });
@@ -72,6 +73,7 @@ namespace ProjectParticipantManagementSystemAPI
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Department>("Departments");
+            builder.EntitySet<CompanyProject>("CompanyProjects");
             return builder.GetEdmModel();
         }
     }
