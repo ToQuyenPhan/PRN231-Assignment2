@@ -14,6 +14,9 @@ namespace BusinessObject.Context
     {
         public ProjectParticipatingDbContext() { }
 
+        public ProjectParticipatingDbContext(DbContextOptions<ProjectParticipatingDbContext> options) : base(options)
+        { }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new ConfigurationBuilder()

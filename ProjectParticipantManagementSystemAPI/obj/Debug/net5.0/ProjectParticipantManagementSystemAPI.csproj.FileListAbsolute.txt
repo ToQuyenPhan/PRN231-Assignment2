@@ -67,3 +67,9 @@ C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantMana
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\obj\Debug\net5.0\ProjectParticipantManagementSystemAPI.pdb
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\obj\Debug\net5.0\ProjectParticipantManagementSystemAPI.genruntimeconfig.cache
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\obj\Debug\net5.0\ref\ProjectParticipantManagementSystemAPI.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\bin\Debug\net5.0\Microsoft.AspNetCore.OData.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\bin\Debug\net5.0\Microsoft.OData.Core.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\bin\Debug\net5.0\Microsoft.OData.Edm.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\bin\Debug\net5.0\Microsoft.OData.ModelBuilder.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemAPI\bin\Debug\net5.0\Microsoft.Spatial.dll
