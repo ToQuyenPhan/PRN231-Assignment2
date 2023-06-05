@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\DataAccess\\DataAccess.csproj": {}
+    "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\lennovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\BusinessObject\\obj\\",
+        "projectPath": "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\lennovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -89,21 +94,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\DataAccess\\DataAccess.csproj": {
+    "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\lennovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\DataAccess\\obj\\",
+        "projectPath": "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\lennovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -111,14 +120,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\lennovo\\source\\repos\\PhanThiToQuyen_SE150351_A02\\BusinessObject\\BusinessObject.csproj"
+              "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\PRN231\\Code\\AS2\\PRN231-Assignment2\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -182,7 +192,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
