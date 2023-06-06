@@ -15,7 +15,7 @@ namespace DataAccess.Repositories.GenericRepo
 
         public IEnumerable<T> GetAll(string includeProperties) => dao.GetAll(includeProperties);
 
-        public T GetById(object id) => dao.GetById(id);
+        public T GetById(object id, string includeProperties, Expression<Func<T, bool>> where) => dao.GetById(id, includeProperties, where);
 
         public void Insert(T obj) => dao.Insert(obj);
 

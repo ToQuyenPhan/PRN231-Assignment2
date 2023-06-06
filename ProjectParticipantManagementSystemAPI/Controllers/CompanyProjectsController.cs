@@ -28,7 +28,7 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
         [EnableQuery]
         public IActionResult Get([FromODataUri] int key)
         {
-            var companyProject = GenericRepo.GetById(key);
+            var companyProject = GenericRepo.GetById(key, null, null);
             if (companyProject == null)
             {
                 return NotFound();

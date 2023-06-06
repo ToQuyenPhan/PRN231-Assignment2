@@ -13,6 +13,6 @@ namespace DataAccess.Repositories.GenericRepo
         void Update(T obj);
         IEnumerable<T> GetAll(string includeProperties);
         void Delete(object id);
-        T GetById(object id);
+        T GetById(object id, string includeProperties, Expression<Func<T, bool>> where);
     }
 }

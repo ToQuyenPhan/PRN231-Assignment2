@@ -27,7 +27,7 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
         [EnableQuery]
         public IActionResult Get([FromODataUri] int key)
         {
-            var employee = GenericRepo.GetById(key);
+            var employee = GenericRepo.GetById(key, "Department", e => e.EmployeeID == key);
             if (employee == null)
             {
                 return NotFound();

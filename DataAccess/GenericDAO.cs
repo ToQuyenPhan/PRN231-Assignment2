@@ -61,10 +61,19 @@ namespace DataAccess
             }
         }
 
-        public T GetById(object id)
+        public T GetById(object id, string includeProperties, Expression<Func<T, bool>> where)
         {
             using (var context = new ProjectParticipatingDbContext())
             {
+                if (includeProperties != null)
+                {
+                    IQueryable<T> query = context.Set<T>();
+                    foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        query = query.Include(includeProperty);
+                    }
+                    return query.SingleOrDefault(where);
+                }
                 return context.Set<T>().Find(id);
             }
         }
