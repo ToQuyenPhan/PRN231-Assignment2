@@ -19,7 +19,7 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
         [EnableQuery]
         public ActionResult<IEnumerable<Department>> Get()
         {
-            var list = GenericRepo.GetAll();
+            var list = GenericRepo.GetAll(null);
             return Ok(list);
         }
 

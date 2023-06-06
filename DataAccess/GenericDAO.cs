@@ -44,10 +44,19 @@ namespace DataAccess
             }
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(string includeProperties)
         {
             using (var context = new ProjectParticipatingDbContext())
             {
+                if(includeProperties != null)
+                {
+                    IQueryable<T> query = context.Set<T>();
+                    foreach(var includeProperty in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        query = query.Include(includeProperty);
+                    }
+                    return query.ToList();
+                }
                 return context.Set<T>().ToList();
             }
         }

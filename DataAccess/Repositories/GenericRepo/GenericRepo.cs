@@ -13,7 +13,7 @@ namespace DataAccess.Repositories.GenericRepo
 
         public void Delete(object id) => dao.Delete(id);
 
-        public IEnumerable<T> GetAll() => dao.GetAll();
+        public IEnumerable<T> GetAll(string includeProperties) => dao.GetAll(includeProperties);
 
         public T GetById(object id) => dao.GetById(id);
 

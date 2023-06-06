@@ -11,7 +11,7 @@ namespace DataAccess.Repositories.GenericRepo
     {
         void Insert(T obj);
         void Update(T obj);
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(string includeProperties);
         void Delete(object id);
         T GetById(object id);
     }

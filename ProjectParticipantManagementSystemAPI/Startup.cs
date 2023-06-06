@@ -1,6 +1,7 @@
 using BusinessObject.Context;
 using BusinessObject.Models;
 using DataAccess.Repositories.GenericRepo;
+using DataAccess.Repositories.ParticipatingProjectRepo;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,6 +41,9 @@ namespace ProjectParticipantManagementSystemAPI
             .AddRouteComponents("odata", GetEdmModel()));
             services.AddScoped<IGenericRepo<Department>, GenericRepo<Department>>();
             services.AddScoped<IGenericRepo<CompanyProject>, GenericRepo<CompanyProject>>();
+            services.AddScoped<IGenericRepo<Employee>, GenericRepo<Employee>>();
+            services.AddScoped<IGenericRepo<ParticipatingProject>, GenericRepo<ParticipatingProject>>();
+            services.AddScoped<IParticipatingProjectRepo, ParticipatingProjectRepo>();
             //services.AddSwaggerGen(c =>
             //{
             //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectParticipantManagementSystemAPI", Version = "v1" });
@@ -74,6 +78,13 @@ namespace ProjectParticipantManagementSystemAPI
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Department>("Departments");
             builder.EntitySet<CompanyProject>("CompanyProjects");
+            builder.EntitySet<Employee>("Employees");
+            builder.EntityType<ParticipatingProject>().HasKey(p => new {p.EmployeeID, p.CompanyProjectID});
+            builder.EntitySet<ParticipatingProject>("ParticipatingProjects");
+            var function = builder.Function("DeleteParticipatingProject");
+            function.Parameter<int>("key1");
+            function.Parameter<int>("key2");
+            function.ReturnsCollectionFromEntitySet<ParticipatingProject>("ParticipatingProjects");
             return builder.GetEdmModel();
         }
     }

@@ -21,7 +21,7 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
         [EnableQuery]
         public ActionResult<IEnumerable<CompanyProject>> Get()
         {
-            var list = GenericRepo.GetAll();
+            var list = GenericRepo.GetAll(null);
             return Ok(list);
         }
 
