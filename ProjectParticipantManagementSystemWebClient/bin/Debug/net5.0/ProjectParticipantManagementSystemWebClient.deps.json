@@ -36,6 +36,7 @@
           "BusinessObject": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
+          "Microsoft.Extensions.Configuration": "5.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Simple.OData.Client": "5.26.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
