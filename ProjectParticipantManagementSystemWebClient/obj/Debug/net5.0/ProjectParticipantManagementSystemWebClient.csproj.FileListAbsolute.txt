@@ -195,3 +195,8 @@ C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantMana
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\ru\System.Spatial.resources.dll
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\zh-Hans\System.Spatial.resources.dll
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\zh-Hant\System.Spatial.resources.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Create.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Delete.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Details.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Edit.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Index.cshtml.g.cs

@@ -1,0 +1,45 @@
+﻿@page
+@model ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyProjects.EditModel
+@{
+    ViewData["Title"] = "Edit Company Project";
+}
+<h1>Edit</h1>
+<h4>Company Project</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CompanyProject.CompanyProjectID" />
+            <div class="form-group">
+                <label asp-for="CompanyProject.ProjectName" class="control-label"></label>
+                <input asp-for="CompanyProject.ProjectName" class="form-control" />
+                <span asp-validation-for="CompanyProject.ProjectName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyProject.ProjectDescription" class="control-label"></label>
+                <input asp-for="CompanyProject.ProjectDescription" class="form-control" />
+                <span asp-validation-for="CompanyProject.ProjectDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyProject.EstimatedStartDate" class="control-label"></label>
+                <input asp-for="CompanyProject.EstimatedStartDate" class="form-control" />
+                <span asp-validation-for="CompanyProject.EstimatedStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyProject.ExpectedEndDate" class="control-label"></label>
+                <input asp-for="CompanyProject.ExpectedEndDate" class="form-control" />
+                <span asp-validation-for="CompanyProject.ExpectedEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

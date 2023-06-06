@@ -1,0 +1,64 @@
+﻿@page
+@model ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyProjects.IndexModel
+@{
+    ViewData["Title"] = "Company Projects";
+}
+<h1>Company Project List</h1>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<div class="row">
+    <div class="col-md-10">
+        <form method="post" class="row">
+                    <div class="form-group col-md-6" style="display: inline-block">
+                        <label class="control-label">Search by customer name:</label>
+                        <input asp-for="SearchString" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-6" style="display: inline-block; margin-top: 30px">
+                        <input type="submit" value="Search" class="btn btn-primary" />
+                    </div>
+        </form>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Project Name
+            </th>
+            <th>
+                Project Description
+            </th>
+            <th>
+                Estimated Start Date
+            </th>
+            <th>
+                Expected End Date
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.CompanyProjects) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstimatedStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpectedEndDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CompanyProjectID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CompanyProjectID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CompanyProjectID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
