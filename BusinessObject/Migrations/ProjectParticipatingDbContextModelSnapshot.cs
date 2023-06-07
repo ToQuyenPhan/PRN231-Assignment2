@@ -133,6 +133,8 @@ namespace BusinessObject.Migrations
 
                     b.HasIndex("CompanyProjectID");
 
+                    b.HasIndex("EmployeeID", "CompanyProjectID");
+
                     b.ToTable("ParticipatingProjects");
                 });
 

@@ -200,3 +200,6 @@ C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantMana
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Details.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Edit.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Index.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\CustomerPages\Profile.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\Shared\_CustomerLayout.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\CustomerPages\EditProfile.cshtml.g.cs

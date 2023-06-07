@@ -28,6 +28,7 @@ namespace ProjectParticipantManagementSystemWebClient
         {
             services.AddRazorPages();
             services.AddDbContext<ProjectParticipatingDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ProjectParticipatingManagementDB")));
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +45,7 @@ namespace ProjectParticipantManagementSystemWebClient
                 app.UseHsts();
             }
 
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

@@ -23,23 +23,22 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
         }
 
         [EnableQuery]
-        public ActionResult<IEnumerable<ParticipatingProject>> Get()
+        public ActionResult<IEnumerable<ParticipatingProject>> Get([FromQuery] int companyProjectId)
         {
-            var list = GenericRepo.GetAll(null);
+            var list = GenericRepo.GetAll("Employee");
             return Ok(list);
         }
 
-        //[EnableQuery]
-        //[ODataRoute("ParticipatingProject({employeeId},{companyProjectId}")]
-        //public ActionResult<IEnumerable<ParticipatingProject>> Get([FromODataUri] int employeeId, [FromODataUri] int companyProjectId)
-        //{
-        //    var participatingProjects = ParticipatingProjectRepo.GetParticipatingProjectsByCompanyProjectID(companyProjectId);
-        //    if (participatingProjects == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(participatingProjects);
-        //}
+        [EnableQuery]
+        public ActionResult<IEnumerable<ParticipatingProject>> Get([FromQuery]int employeeId, [FromQuery]int companyProjectId)
+        {
+            var participatingProjects = ParticipatingProjectRepo.GetParticipatingProjectsByCompanyProjectID(companyProjectId);
+            if (participatingProjects == null)
+            {
+                return NotFound();
+            }
+            return Ok(participatingProjects);
+        }
 
         [EnableQuery]
         public IActionResult Post([FromBody] ParticipatingProject participatingProject)
@@ -51,19 +50,14 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
         [EnableQuery]
         public IActionResult Patch([FromBody] ParticipatingProject participatingProject)
         {
-            //if (key != participatingProject.EmployeeID)
-            //{
-            //    return BadRequest();
-            //}
             GenericRepo.Update(participatingProject);
             return Ok(participatingProject);
         }
 
         [EnableQuery]
-        [ODataRoute("DeleteParticipatingProject(key1={key1}, key2={key2})")]
-        public IActionResult Delete([FromODataUri] int key1, [FromODataUri] int key2)
+        public IActionResult Delete([FromQuery]int employeeId, [FromQuery]int companyProjectId)
         {
-            ParticipatingProjectRepo.Delete(key1, key2);
+            ParticipatingProjectRepo.Delete(employeeId, companyProjectId);
             return Ok();
         }
         //Search Query: https://localhost:44351/odata/ParticipatingProjects?$filter=contains(FullName, 'A')

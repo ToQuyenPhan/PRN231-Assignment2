@@ -13,6 +13,7 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Threading.Tasks;
 using BusinessObject;
+using Microsoft.AspNetCore.Http;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages
 {
@@ -59,13 +60,19 @@ namespace ProjectParticipantManagementSystemWebClient.Pages
                 options.Converters.Add(new JsonStringEnumConverter());
                 var result = JsonSerializer.Deserialize<Odata<Employee>>(strData, options);
                 var employee = result.Value;
-                if(employee != null)
+                if(employee != null && employee.Count > 0)
                 {
-                    Message = "Hello Customer";
-                    return Page();
+                    int id = 0;
+                    foreach(var item in employee)
+                    {
+                        id = item.EmployeeID;
+                    }
+                    HttpContext.Session.SetInt32("id", id);
+                    return RedirectToPage("/CustomerPages/Profile", new { Id = id});
                 }
                 else
                 {
+                    Message = "Incorrect email or password!";
                     return Page();
                 }
             }

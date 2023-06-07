@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessObject.Models
 {
+    [Index(nameof(EmployeeID), nameof(CompanyProjectID))]
     public class ParticipatingProject
     {
         public ParticipatingProject() {
@@ -23,14 +24,16 @@ namespace BusinessObject.Models
         [Required]
         public int ProjectRole { get; set; }
 
-        [Key, ForeignKey("CompanyProjectID")]
+        [Required]
         public int CompanyProjectID { get; set; }
 
-        [Key, ForeignKey("EmployeeID")]
-        public int EmployeeID { get; set; }
-
+        [ForeignKey("CompanyProjectID")]
         public virtual CompanyProject CompanyProject { get; set; }
 
+        [Required]
+        public int EmployeeID { get; set; }
+
+        [ForeignKey("EmployeeID")]
         public virtual Employee Employee { get; set; }
     }
 }

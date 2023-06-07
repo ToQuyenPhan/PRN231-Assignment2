@@ -81,10 +81,10 @@ namespace ProjectParticipantManagementSystemAPI
             builder.EntitySet<Employee>("Employees");
             builder.EntityType<ParticipatingProject>().HasKey(p => new {p.EmployeeID, p.CompanyProjectID});
             builder.EntitySet<ParticipatingProject>("ParticipatingProjects");
-            var function = builder.Function("DeleteParticipatingProject");
-            function.Parameter<int>("key1");
-            function.Parameter<int>("key2");
-            function.ReturnsCollectionFromEntitySet<ParticipatingProject>("ParticipatingProjects");
+            //var function = builder.Function("DeleteParticipatingProject");
+            //function.Parameter<int>("key1");
+            //function.Parameter<int>("key2");
+            //function.ReturnsCollectionFromEntitySet<ParticipatingProject>("ParticipatingProjects");
             return builder.GetEdmModel();
         }
     }

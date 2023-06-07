@@ -55,11 +55,11 @@ namespace ProjectParticipantManagementSystemAPI.Data
             {
                 var participatingProjects = new ParticipatingProject[]
                 {
-                    new ParticipatingProject{CompanyProjectID = 1, EmployeeID = 3, StartDate = System.DateTime.Now,
+                    new ParticipatingProject{CompanyProjectID = 1, EmployeeID = 1, StartDate = System.DateTime.Now,
                         EndDate = DateTime.Today.AddDays(2), ProjectRole = 1},
-                    new ParticipatingProject{CompanyProjectID = 2, EmployeeID = 4, StartDate = System.DateTime.Now,
+                    new ParticipatingProject{CompanyProjectID = 2, EmployeeID = 2, StartDate = System.DateTime.Now,
                         EndDate = DateTime.Today.AddDays(1), ProjectRole = 2},
-                    new ParticipatingProject{CompanyProjectID = 3, EmployeeID = 5, StartDate = System.DateTime.Now,
+                    new ParticipatingProject{CompanyProjectID = 3, EmployeeID = 3, StartDate = System.DateTime.Now,
                         EndDate = DateTime.Today.AddDays(3), ProjectRole = 1}
                 };
                 context.ParticipatingProjects.AddRange(participatingProjects);

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectParticipantManagementSystemAPI", "ProjectParticipantManagementSystemAPI\ProjectParticipantManagementSystemAPI.csproj", "{7EE1AF50-0491-4301-B8B6-A78F187E1D51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectParticipantManagementSystemWebClient", "ProjectParticipantManagementSystemWebClient\ProjectParticipantManagementSystemWebClient.csproj", "{A78E9DB5-8F65-4C87-AFD8-F876F5BC1AC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectParticipantManagementSystemWebClient", "ProjectParticipantManagementSystemWebClient\ProjectParticipantManagementSystemWebClient.csproj", "{A78E9DB5-8F65-4C87-AFD8-F876F5BC1AC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

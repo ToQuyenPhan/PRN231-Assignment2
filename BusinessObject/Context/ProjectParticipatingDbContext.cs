@@ -37,8 +37,6 @@ namespace BusinessObject.Context
             optionsBuilder.Entity<ParticipatingProject>(entity =>
             {
                 entity.HasKey(p => new { p.EmployeeID, p.CompanyProjectID });
-                entity.HasOne(p => p.Employee).WithMany(e => e.ParticipatingProjects).HasForeignKey(p => p.EmployeeID);
-                entity.HasOne(p => p.CompanyProject).WithMany(e => e.ParticipatingProjects).HasForeignKey(p => p.CompanyProjectID);
             }
             );
             
