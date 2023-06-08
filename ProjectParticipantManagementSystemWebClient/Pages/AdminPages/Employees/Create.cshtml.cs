@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using BusinessObject.Context;
 using BusinessObject.Models;
 using ProjectParticipantManagementSystemWebClient.ViewModels;
 using System.Net.Http.Headers;
@@ -21,11 +20,9 @@ namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.Employees
     {
         private HttpClient client = null;
         private string EmployeeApiUrl = "";
-        private readonly BusinessObject.Context.ProjectParticipatingDbContext _context;
 
-        public CreateModel(BusinessObject.Context.ProjectParticipatingDbContext context)
+        public CreateModel()
         {
-            _context = context;
         }
 
         public async Task<IActionResult> OnGet()

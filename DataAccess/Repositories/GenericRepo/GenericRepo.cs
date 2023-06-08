@@ -13,6 +13,8 @@ namespace DataAccess.Repositories.GenericRepo
 
         public void Delete(object id) => dao.Delete(id);
 
+        public IEnumerable<T> Find(string includeProperties, Expression<Func<T, bool>> expression) => dao.Find(includeProperties, expression);
+
         public IEnumerable<T> GetAll(string includeProperties) => dao.GetAll(includeProperties);
 
         public T GetById(object id, string includeProperties, Expression<Func<T, bool>> where) => dao.GetById(id, includeProperties, where);

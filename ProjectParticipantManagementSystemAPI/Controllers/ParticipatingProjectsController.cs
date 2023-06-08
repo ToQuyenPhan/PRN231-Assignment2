@@ -23,16 +23,9 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
         }
 
         [EnableQuery]
-        public ActionResult<IEnumerable<ParticipatingProject>> Get([FromQuery] int companyProjectId)
+        public IActionResult Get([FromQuery] int employeeId, [FromQuery] int companyProjectId)
         {
-            var list = GenericRepo.GetAll("Employee");
-            return Ok(list);
-        }
-
-        [EnableQuery]
-        public ActionResult<IEnumerable<ParticipatingProject>> Get([FromQuery]int employeeId, [FromQuery]int companyProjectId)
-        {
-            var participatingProjects = ParticipatingProjectRepo.GetParticipatingProjectsByCompanyProjectID(companyProjectId);
+            var participatingProjects = ParticipatingProjectRepo.GetParticipatingProject(employeeId,companyProjectId);
             if (participatingProjects == null)
             {
                 return NotFound();
@@ -54,12 +47,12 @@ namespace ProjectParticipantManagementSystemAPI.Controllers
             return Ok(participatingProject);
         }
 
+        [HttpDelete("odata/ParticipatingProjects/DeleteParticipatingProject")]
         [EnableQuery]
-        public IActionResult Delete([FromQuery]int employeeId, [FromQuery]int companyProjectId)
+        public IActionResult Delete([FromQuery] int employeeId, [FromQuery] int companyProjectId)
         {
             ParticipatingProjectRepo.Delete(employeeId, companyProjectId);
             return Ok();
         }
-        //Search Query: https://localhost:44351/odata/ParticipatingProjects?$filter=contains(FullName, 'A')
     }
 }

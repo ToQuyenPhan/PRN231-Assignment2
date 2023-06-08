@@ -13,6 +13,6 @@ namespace DataAccess.Repositories.ParticipatingProjectRepo
 
         public void Delete(int employeeId, int companyProjectId) => dao.Delete(employeeId, companyProjectId);
 
-        public IEnumerable<ParticipatingProject> GetParticipatingProjectsByCompanyProjectID(int id) => dao.GetParticipatingProjectsByCompanyProjectID(id);
+        public ParticipatingProject GetParticipatingProject(int employeeId, int companyProjectId) => dao.GetParticipatingProject(employeeId, companyProjectId);
     }
 }

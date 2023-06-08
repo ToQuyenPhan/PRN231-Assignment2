@@ -37,8 +37,10 @@ namespace ProjectParticipantManagementSystemAPI
 
             services.AddControllers();
             services.AddDbContext<ProjectParticipatingDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ProjectParticipatingManagementDB")));
-            services.AddControllers().AddOData(option => option.Select().Filter().Count().OrderBy().Expand()
-            .AddRouteComponents("odata", GetEdmModel()));
+            services.AddControllers().AddOData(option => 
+            {
+                option.Select().Filter().Count().OrderBy().Expand().AddRouteComponents("odata", GetEdmModel());
+            });
             services.AddScoped<IGenericRepo<Department>, GenericRepo<Department>>();
             services.AddScoped<IGenericRepo<CompanyProject>, GenericRepo<CompanyProject>>();
             services.AddScoped<IGenericRepo<Employee>, GenericRepo<Employee>>();
@@ -81,10 +83,6 @@ namespace ProjectParticipantManagementSystemAPI
             builder.EntitySet<Employee>("Employees");
             builder.EntityType<ParticipatingProject>().HasKey(p => new {p.EmployeeID, p.CompanyProjectID});
             builder.EntitySet<ParticipatingProject>("ParticipatingProjects");
-            //var function = builder.Function("DeleteParticipatingProject");
-            //function.Parameter<int>("key1");
-            //function.Parameter<int>("key2");
-            //function.ReturnsCollectionFromEntitySet<ParticipatingProject>("ParticipatingProjects");
             return builder.GetEdmModel();
         }
     }

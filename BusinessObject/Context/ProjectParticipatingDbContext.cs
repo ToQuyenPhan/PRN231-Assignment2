@@ -12,10 +12,13 @@ namespace BusinessObject.Context
 {
     public class ProjectParticipatingDbContext : DbContext
     {
-        public ProjectParticipatingDbContext() { }
+        public ProjectParticipatingDbContext()
+        {
+        }
 
         public ProjectParticipatingDbContext(DbContextOptions<ProjectParticipatingDbContext> options) : base(options)
-        { }
+        {           
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -38,8 +41,7 @@ namespace BusinessObject.Context
             {
                 entity.HasKey(p => new { p.EmployeeID, p.CompanyProjectID });
             }
-            );
-            
+            );    
         }
 
     }

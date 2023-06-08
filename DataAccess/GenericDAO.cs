@@ -48,10 +48,10 @@ namespace DataAccess
         {
             using (var context = new ProjectParticipatingDbContext())
             {
-                if(includeProperties != null)
+                if (includeProperties != null)
                 {
                     IQueryable<T> query = context.Set<T>();
-                    foreach(var includeProperty in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                    foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                     {
                         query = query.Include(includeProperty);
                     }
@@ -60,6 +60,23 @@ namespace DataAccess
                 return context.Set<T>().ToList();
             }
         }
+
+        public IEnumerable<T> Find(string includeProperties, Expression<Func<T, bool>> expression)
+        {
+            using (var context = new ProjectParticipatingDbContext())
+            {
+                IQueryable<T> query = context.Set<T>().Where(expression);
+                if (includeProperties != null)
+                {
+                    foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        query = query.Include(includeProperty);
+                    }
+                }
+                return query.ToList();
+            }
+        }
+
 
         public T GetById(object id, string includeProperties, Expression<Func<T, bool>> where)
         {
@@ -76,14 +93,6 @@ namespace DataAccess
                 }
                 return context.Set<T>().Find(id);
             }
-        }
-
-        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
-        {
-            using (var context = new ProjectParticipatingDbContext())
-            {
-                return context.Set<T>().Where(expression);
-            }    
         }
     }
 }

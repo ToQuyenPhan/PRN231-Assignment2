@@ -1,0 +1,83 @@
+﻿@page
+@model ProjectParticipantManagementSystemWebClient.Pages.AdminPages.ParticipatingProjects.IndexModel
+@{
+    ViewData["Title"] = "Participating Projects";
+}
+<h1>Participating Projects</h1>
+<p>
+    <a asp-page="Create" asp-route-id="@Model.CompanyProjectId">Create New</a>
+</p>
+<div class="row">
+    <div class="col-md-10">
+        <form method="post" class="row">
+                    <div class="form-group col-md-6" style="display: inline-block">
+                        <label class="control-label">Search by employee name:</label>
+                        <input asp-for="SearchString" class="form-control"/>
+                    </div>
+                    <div class="form-group col-md-6" style="display: inline-block; margin-top: 30px">
+                        <input type="hidden" asp-for="CompanyProjectId" class="form-control" />
+                        <input type="submit" value="Search" class="btn btn-primary" />
+                    </div>
+        </form>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Employee ID
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Estimated Start Date
+            </th>
+            <th>
+                Estimated End Date
+            </th>
+            <th>
+                Project Role
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ParticipatingProjects)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employee.EmployeeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employee.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                @if (item.ProjectRole == 1)
+                {
+                    <td>
+                        Project Manager
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        Project Member
+                    </td>
+                }
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.EmployeeID" asp-route-id2="@item.CompanyProjectID">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.EmployeeID" asp-route-id2="@item.CompanyProjectID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-page="/AdminPages/CompanyProjects/Index">Back to Company Project List</a>
+</div>

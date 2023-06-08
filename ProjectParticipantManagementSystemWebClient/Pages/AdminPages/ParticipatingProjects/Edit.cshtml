@@ -1,0 +1,47 @@
+﻿@page
+@model ProjectParticipantManagementSystemWebClient.Pages.AdminPages.ParticipatingProjects.EditModel
+@{
+    ViewData["Title"] = "Edit Participating Project";
+}
+<h1>Edit</h1>
+<h4>Participating Project</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ParticipatingProject.StartDate" class="control-label"></label>
+                <input asp-for="ParticipatingProject.StartDate" class="form-control" />
+                <span asp-validation-for="ParticipatingProject.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipatingProject.EndDate" class="control-label"></label>
+                <input asp-for="ParticipatingProject.EndDate" class="form-control" />
+                <span asp-validation-for="ParticipatingProject.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipatingProject.ProjectRole" class="control-label"></label>
+                <select asp-for="ParticipatingProject.ProjectRole" class="form-control" asp-items="ViewBag.ProjectRole"></select>
+                <span asp-validation-for="ParticipatingProject.ProjectRole" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="ParticipatingProject.CompanyProjectID" />
+            <input type="hidden" asp-for="ParticipatingProject.EmployeeID" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            @if (ViewData["Message"] != null)
+            {
+                        <div class="alert alert-warning text-center" role="alert">
+                    @Html.Raw(@ViewData["Message"])
+                        </div>
+            }
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="./Index" asp-route-id="@Model.ParticipatingProject.CompanyProjectID">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

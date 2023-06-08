@@ -14,5 +14,6 @@ namespace DataAccess.Repositories.GenericRepo
         IEnumerable<T> GetAll(string includeProperties);
         void Delete(object id);
         T GetById(object id, string includeProperties, Expression<Func<T, bool>> where);
+        IEnumerable<T> Find(string includeProperies, Expression<Func<T, bool>> expression);
     }
 }

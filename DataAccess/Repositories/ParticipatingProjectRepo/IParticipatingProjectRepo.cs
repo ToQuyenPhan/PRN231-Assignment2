@@ -9,7 +9,7 @@ namespace DataAccess.Repositories.ParticipatingProjectRepo
 {
     public interface IParticipatingProjectRepo
     {
-        IEnumerable<ParticipatingProject> GetParticipatingProjectsByCompanyProjectID(int id);
+        ParticipatingProject GetParticipatingProject(int employeeId, int companyProjectId);
         void Delete(int employeeId, int companyProjectId);
     }
 }

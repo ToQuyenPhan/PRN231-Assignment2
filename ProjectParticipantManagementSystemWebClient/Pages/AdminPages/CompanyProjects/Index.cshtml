@@ -11,7 +11,7 @@
     <div class="col-md-10">
         <form method="post" class="row">
                     <div class="form-group col-md-6" style="display: inline-block">
-                        <label class="control-label">Search by customer name:</label>
+                        <label class="control-label">Search by project name:</label>
                         <input asp-for="SearchString" class="form-control"/>
                     </div>
                     <div class="form-group col-md-6" style="display: inline-block; margin-top: 30px">
@@ -55,7 +55,7 @@
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.CompanyProjectID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.CompanyProjectID">Details</a> |
+                <a asp-page="/AdminPages/ParticipatingProjects/Index" asp-route-id="@item.CompanyProjectID">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.CompanyProjectID">Delete</a>
             </td>
         </tr>

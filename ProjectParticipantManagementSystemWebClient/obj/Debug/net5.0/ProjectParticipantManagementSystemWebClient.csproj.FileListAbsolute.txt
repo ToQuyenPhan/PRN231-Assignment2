@@ -203,3 +203,11 @@ C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantMana
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\CustomerPages\Profile.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\Shared\_CustomerLayout.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\CustomerPages\EditProfile.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Create.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Delete.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Details.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Edit.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Index.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\CustomerPages\ParticipatingProjects.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll

@@ -24,12 +24,14 @@ namespace BusinessObject.Models
         [Required]
         public int ProjectRole { get; set; }
 
+        [Key]
         [Required]
         public int CompanyProjectID { get; set; }
 
         [ForeignKey("CompanyProjectID")]
         public virtual CompanyProject CompanyProject { get; set; }
 
+        [Key]
         [Required]
         public int EmployeeID { get; set; }
 

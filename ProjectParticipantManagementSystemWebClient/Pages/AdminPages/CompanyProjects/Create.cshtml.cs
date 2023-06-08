@@ -8,6 +8,7 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Text.Json;
 using System.Text;
+using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyProjects
 {
@@ -25,11 +26,19 @@ namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyPr
         [BindProperty]
         public CompanyProjectViewModel CompanyProject { get; set; }
 
+        [ViewData]
+        public string Message { get; set; }
+
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
+                return Page();
+            }
+            if (CompanyProject.ExpectedEndDate.CompareTo(CompanyProject.EstimatedStartDate) <= 0)
+            {
+                Message = "The end date must be later than start date!";
                 return Page();
             }
             try

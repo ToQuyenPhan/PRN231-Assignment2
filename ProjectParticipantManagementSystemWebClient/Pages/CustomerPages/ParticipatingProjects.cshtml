@@ -1,0 +1,57 @@
+﻿@page
+@model ProjectParticipantManagementSystemWebClient.Pages.CustomerPages.ParticipatingProjectsModel
+@{
+    ViewData["Title"] = "Participating Projects";
+    Layout = "_CustomerLayout";
+}
+<h1>Participating Projects</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Company Project
+            </th>
+            <th>
+                Start Date
+            </th>
+            <th>
+                End Date
+            </th>
+            <th>
+                Project Role
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ParticipatingProjects)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyProject.ProjectName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                @if (item.ProjectRole == 1)
+                {
+                    <td>
+                        Project Manager
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        Project Member
+                    </td>
+                }
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employee.Address)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

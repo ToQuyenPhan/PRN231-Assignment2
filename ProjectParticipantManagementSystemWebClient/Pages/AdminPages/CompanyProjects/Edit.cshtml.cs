@@ -23,6 +23,9 @@ namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyPr
         [BindProperty]
         public CompanyProjectViewModel CompanyProject { get; set; }
 
+        [ViewData]
+        public string Message { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -62,6 +65,11 @@ namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyPr
         {
             if (!ModelState.IsValid)
             {
+                return Page();
+            }
+            if (CompanyProject.ExpectedEndDate.CompareTo(CompanyProject.EstimatedStartDate) <= 0)
+            {
+                Message = "The end date must be later than start date!";
                 return Page();
             }
             try

@@ -1,5 +1,6 @@
 ﻿using BusinessObject.Context;
 using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,19 @@ namespace DataAccess
     {
         public ParticipatingProjectDAO() { }
 
-        public IEnumerable<ParticipatingProject> GetParticipatingProjectsByCompanyProjectID(int id)
+        public ParticipatingProject GetParticipatingProject(int employeeId, int companyProjectId)
         {
             using (var context = new ProjectParticipatingDbContext())
             {
-                return context.ParticipatingProjects.Where(p => p.CompanyProjectID == id).ToList();
+                return context.ParticipatingProjects.Where(p => p.EmployeeID == employeeId && p.CompanyProjectID == companyProjectId).Include(p => p.Employee).FirstOrDefault();
+            }
+        }
+
+        public IEnumerable<ParticipatingProject> GetParticipatingProjectsByEmployeeID(int id)
+        {
+            using (var context = new ProjectParticipatingDbContext())
+            {
+                return context.ParticipatingProjects.Where(p => p.EmployeeID == id).ToList();
             }
         }
 
