@@ -11,21 +11,27 @@ namespace DataAccess
 {
     public class ParticipatingProjectDAO
     {
+        private static ParticipatingProjectDAO instance = null;
+        private static readonly object instanceLock = new object();
         public ParticipatingProjectDAO() { }
+
+        public static ParticipatingProjectDAO Instance
+        {
+            get
+            {
+                lock (instanceLock)
+                {
+                    if (instance == null) instance = new ParticipatingProjectDAO();
+                    return instance;
+                }
+            }
+        }
 
         public ParticipatingProject GetParticipatingProject(int employeeId, int companyProjectId)
         {
             using (var context = new ProjectParticipatingDbContext())
             {
                 return context.ParticipatingProjects.Where(p => p.EmployeeID == employeeId && p.CompanyProjectID == companyProjectId).Include(p => p.Employee).FirstOrDefault();
-            }
-        }
-
-        public IEnumerable<ParticipatingProject> GetParticipatingProjectsByEmployeeID(int id)
-        {
-            using (var context = new ProjectParticipatingDbContext())
-            {
-                return context.ParticipatingProjects.Where(p => p.EmployeeID == id).ToList();
             }
         }
 

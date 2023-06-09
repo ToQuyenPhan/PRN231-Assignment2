@@ -33,11 +33,11 @@ namespace ProjectParticipantManagementSystemAPI
             {
                 option.Select().Filter().Count().OrderBy().Expand().AddRouteComponents("odata", GetEdmModel());
             });
+            services.AddSingleton<IParticipatingProjectRepo, ParticipatingProjectRepo>();
             services.AddScoped<IGenericRepo<Department>, GenericRepo<Department>>();
             services.AddScoped<IGenericRepo<CompanyProject>, GenericRepo<CompanyProject>>();
             services.AddScoped<IGenericRepo<Employee>, GenericRepo<Employee>>();
             services.AddScoped<IGenericRepo<ParticipatingProject>, GenericRepo<ParticipatingProject>>();
-            services.AddScoped<IParticipatingProjectRepo, ParticipatingProjectRepo>();         
             //services.AddSwaggerGen(c =>
             //{
             //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectParticipantManagementSystemAPI", Version = "v1" });

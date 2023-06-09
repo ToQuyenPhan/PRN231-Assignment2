@@ -9,10 +9,8 @@ namespace DataAccess.Repositories.ParticipatingProjectRepo
 {
     public class ParticipatingProjectRepo : IParticipatingProjectRepo
     {
-        private ParticipatingProjectDAO dao = new ParticipatingProjectDAO();
+        public void Delete(int employeeId, int companyProjectId) => ParticipatingProjectDAO.Instance.Delete(employeeId, companyProjectId);
 
-        public void Delete(int employeeId, int companyProjectId) => dao.Delete(employeeId, companyProjectId);
-
-        public ParticipatingProject GetParticipatingProject(int employeeId, int companyProjectId) => dao.GetParticipatingProject(employeeId, companyProjectId);
+        public ParticipatingProject GetParticipatingProject(int employeeId, int companyProjectId) => ParticipatingProjectDAO.Instance.GetParticipatingProject(employeeId, companyProjectId);
     }
 }
