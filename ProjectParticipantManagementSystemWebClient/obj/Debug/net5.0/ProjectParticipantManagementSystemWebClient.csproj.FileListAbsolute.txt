@@ -152,7 +152,6 @@ C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantMana
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\ref\ProjectParticipantManagementSystemWebClient.dll
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\Employees\Create.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\Employees\Delete.cshtml.g.cs
-C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\Employees\Details.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\Employees\Edit.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\Employees\Index.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\Microsoft.Data.Edm.dll
@@ -197,7 +196,6 @@ C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantMana
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\zh-Hant\System.Spatial.resources.dll
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Create.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Delete.cshtml.g.cs
-C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Details.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Edit.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\CompanyProjects\Index.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\CustomerPages\Profile.cshtml.g.cs
@@ -205,9 +203,10 @@ C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantMana
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\CustomerPages\EditProfile.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Create.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Delete.cshtml.g.cs
-C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Details.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Edit.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AdminPages\ParticipatingProjects\Index.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\CustomerPages\ParticipatingProjects.cshtml.g.cs
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\Castle.Core.dll
 C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\AccessDenied.cshtml.g.cs
+C:\Users\lennovo\source\repos\PhanThiToQuyen_SE150351_A02\ProjectParticipantManagementSystemWebClient\obj\Debug\net5.0\Razor\Pages\Logout.cshtml.g.cs

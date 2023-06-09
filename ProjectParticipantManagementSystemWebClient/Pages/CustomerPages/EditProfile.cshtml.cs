@@ -13,9 +13,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+using ProjectParticipantManagementSystemWebClient.Utils;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.CustomerPages
 {
+    [Authorize(Roles = nameof(Role.Customer))]
     public class EditProfileModel : PageModel
     {
         private HttpClient client = null;

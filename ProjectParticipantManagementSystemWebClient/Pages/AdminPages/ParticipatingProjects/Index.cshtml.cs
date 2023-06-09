@@ -8,9 +8,12 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
+using ProjectParticipantManagementSystemWebClient.Utils;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.ParticipatingProjects
 {
+    [Authorize(Roles = nameof(Role.Admin))]
     public class IndexModel : PageModel
     {
         private HttpClient client= new HttpClient();

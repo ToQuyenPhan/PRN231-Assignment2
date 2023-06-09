@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using BusinessObject.Context;
 using BusinessObject.Models;
 using ProjectParticipantManagementSystemWebClient.ViewModels;
 using BusinessObject;
@@ -14,10 +12,12 @@ using System.Net.Http;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Text;
-using System.Net.Sockets;
+using Microsoft.AspNetCore.Authorization;
+using ProjectParticipantManagementSystemWebClient.Utils;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.ParticipatingProjects
 {
+    [Authorize(Roles = nameof(Role.Admin))]
     public class CreateModel : PageModel
     {
         private HttpClient client = null;

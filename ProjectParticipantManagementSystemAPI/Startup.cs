@@ -4,21 +4,13 @@ using DataAccess.Repositories.GenericRepo;
 using DataAccess.Repositories.ParticipatingProjectRepo;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
-using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ProjectParticipantManagementSystemAPI
 {
@@ -45,7 +37,7 @@ namespace ProjectParticipantManagementSystemAPI
             services.AddScoped<IGenericRepo<CompanyProject>, GenericRepo<CompanyProject>>();
             services.AddScoped<IGenericRepo<Employee>, GenericRepo<Employee>>();
             services.AddScoped<IGenericRepo<ParticipatingProject>, GenericRepo<ParticipatingProject>>();
-            services.AddScoped<IParticipatingProjectRepo, ParticipatingProjectRepo>();
+            services.AddScoped<IParticipatingProjectRepo, ParticipatingProjectRepo>();         
             //services.AddSwaggerGen(c =>
             //{
             //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectParticipantManagementSystemAPI", Version = "v1" });
@@ -66,7 +58,6 @@ namespace ProjectParticipantManagementSystemAPI
 
             app.UseRouting();
             app.UseODataBatching();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

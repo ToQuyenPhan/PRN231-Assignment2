@@ -8,10 +8,12 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Text.Json;
 using System.Text;
-using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
+using Microsoft.AspNetCore.Authorization;
+using ProjectParticipantManagementSystemWebClient.Utils;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyProjects
 {
+    [Authorize(Roles = nameof(Role.Admin))]
     public class CreateModel : PageModel
     {
         public CreateModel()

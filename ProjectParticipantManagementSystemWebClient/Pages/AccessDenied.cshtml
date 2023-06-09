@@ -1,0 +1,20 @@
+﻿@page "/access-denied"
+@model ProjectParticipantManagementSystemWebClient.Pages.AccessDeniedModel
+@{
+    Layout = null;
+}
+
+<div class="container w-100">
+    <main role="main">
+        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+            <div class="lock"></div>
+            <div class="message mt-3">
+                <p class="h1 text-center">Access to this page is restricted</p>
+                <p class="text-center">Please check with the site admin if you believe this is a mistake.</p>
+                <div class="d-flex justify-content-center">
+                    <a asp-area="" asp-page="/Index" class="btn btn-info text-white"><i class="bi bi-plus-lg"></i> Go Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

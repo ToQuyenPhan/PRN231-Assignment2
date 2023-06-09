@@ -8,9 +8,12 @@ using ProjectParticipantManagementSystemWebClient.ViewModels;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using ProjectParticipantManagementSystemWebClient.Utils;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyProjects
 {
+    [Authorize(Roles = nameof(Role.Admin))]
     public class EditModel : PageModel
     {
         private HttpClient client = null;

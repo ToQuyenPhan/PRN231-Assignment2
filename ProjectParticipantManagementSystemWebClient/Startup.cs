@@ -1,4 +1,5 @@
 using BusinessObject.Context;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +30,13 @@ namespace ProjectParticipantManagementSystemWebClient
             services.AddRazorPages();
             services.AddDbContext<ProjectParticipatingDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ProjectParticipatingManagementDB")));
             services.AddSession();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+            {
+                options.Cookie.Name = "PPMS.Session";
+                options.LogoutPath = "/";
+                options.AccessDeniedPath = "/access-denied";
+            }
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,11 +56,10 @@ namespace ProjectParticipantManagementSystemWebClient
             app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseStatusCodePagesWithRedirects("/");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();

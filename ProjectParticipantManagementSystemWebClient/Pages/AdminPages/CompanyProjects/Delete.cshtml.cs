@@ -5,9 +5,12 @@ using BusinessObject.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
+using ProjectParticipantManagementSystemWebClient.Utils;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.AdminPages.CompanyProjects
 {
+    [Authorize(Roles = nameof(Role.Admin))]
     public class DeleteModel : PageModel
     {
         private HttpClient client = null;

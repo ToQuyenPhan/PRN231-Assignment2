@@ -8,9 +8,12 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+using ProjectParticipantManagementSystemWebClient.Utils;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.CustomerPages
 {
+    [Authorize(Roles = nameof(Role.Customer))]
     public class ParticipatingProjectsModel : PageModel
     {
         public ParticipatingProjectsModel() { }

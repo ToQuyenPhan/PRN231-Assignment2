@@ -6,9 +6,12 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using BusinessObject.Models;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Authorization;
+using ProjectParticipantManagementSystemWebClient.Utils;
 
 namespace ProjectParticipantManagementSystemWebClient.Pages.CustomerPages
 {
+    [Authorize(Roles = nameof(Role.Customer))]
     public class ProfileModel : PageModel
     {
         public ProfileModel() { }
